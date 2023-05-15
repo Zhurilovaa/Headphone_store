@@ -1,0 +1,99 @@
+@import "/src/styles.less";
+
+.head {
+    width: 75%;
+    height: 60px;
+    background-color: @color_backgrount;
+
+    position:fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.logo{
+    position: absolute;
+    left: 0%;
+    right: 92.34%;
+    top: 25%;
+    bottom: 25%;
+}
+
+.name-shop{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: @color_text_black;
+    &:hover{
+        color: @color_orange_dark;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+}
+
+.menu-icons{
+    position: absolute;
+    left: 89.51%;
+    right: -0.27%;
+    top: 0%;
+    bottom: 0%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-icons__element {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;   
+    &:hover{
+        animation: pulse 0.8s;
+        cursor: pointer;
+    } 
+}
+
+.count-product{
+    width: 18px;
+    position: absolute;
+    right: -35%;
+    top: -35%;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: @color_white;
+    background: @color_orange_dark;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.85);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}

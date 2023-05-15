@@ -1,0 +1,26 @@
+<header class="head">
+    <div class="logo">
+        <a class="name-shop" routerLink="/qpick" routerLinkActive="active-link" (click)="onClick.emit('qpick')">
+            <div>QPICK</div>
+        </a>
+    </div>
+    <div class ="menu-icons">
+        <div class="menu-icons__element">
+            <div>
+                <img src="/assets/favourites.svg" alt="Избранное">
+            </div>
+            <div class="count-product">
+                {{ count_product_of_favourite }}
+            </div>
+        </div>
+        <div class="menu-icons__element">
+            <div routerLink="/qpick/basket" routerLinkActive="active-link" (click)="onClick.emit('basket')">
+                <img src="/assets/basket.svg" alt="Корзина">
+            </div>
+            <div class="count-product">
+                {{ count_product_of_busket }}
+            </div>
+        </div>
+    </div>
+</header>
+

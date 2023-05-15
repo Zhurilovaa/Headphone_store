@@ -1,0 +1,57 @@
+<div class="footer">
+    <div class="logo">
+        <a class="name-shop" routerLink="/qpick" routerLinkActive="active-link" (click)="onClick.emit('qpick')">
+            <div>QPICK</div>
+        </a>
+    </div>
+
+    <div class="links">
+        <div class="links__part">
+            <div>
+                <p>Избранное</p>
+            </div>
+            <div>
+                <p>Условия сервиса</p>
+            </div>
+        </div>
+        <div class="links__part">
+            <div routerLink="/qpick/basket" routerLinkActive="active-link" (click)="onClick.emit('basket')">
+                <p>Корзина</p>
+            </div>
+        </div>
+        <div class="links__part">
+            <div>
+                <p>Контакты</p>
+            </div>
+            <div class="links__lang-part">
+                <div class="links__lang">
+                    <img src="/assets/internet.png">
+                </div>
+                <div class="links__lang">
+                    <p id="rus">Rus</p>
+                </div>
+                <div class="links__lang">
+                    Eng
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-media">
+        <div class="social-media__icon">
+            <a onClick="window.open('http://vk.com', '_blank')">
+                <img src="/assets/vk.png"  alt="vk.com">
+            </a>
+        </div>
+        <div class="social-media__icon">
+            <a onClick="window.open('https://telegram.org', '_blank')">
+                <img src="/assets/telegram.png"  alt="telegram">
+            </a>
+        </div>
+        <div class="social-media__icon">
+            <a onClick="window.open('https://www.whatsapp.com/', '_blank')">
+                <img src="/assets/whatsapp.png"  alt="whatsapp">
+            </a>
+        </div>
+    </div>
+</div>

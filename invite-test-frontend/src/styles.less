@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+//Обнуление стилей
+*{
+    padding:0;
+    margin:0;
+    border:0;
+}
+*,*:before,*:after{
+    /*меняем подсчет ширины блока так,что бы было удобнее верстать*/ 
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*убираем линии обводки */
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+/*делаем некоторые теги блочными*/
+nav,footer,header,aside{display:block;}
+/*уравняем поведение шрифтов и элементов для разных браузеров
+в том числе, запрещаем самовольное увеличение шрифта (например на iphone)*/
+html,body{
+    height: 100%;
+    width:  100%;
+    font-size:  100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/*просим эти теги наследовать шрифты, т.к. по умолчанию этого не происходит*/
+input,button,textarea{
+    font-family: inherit;
+}
+/*убираем еще несколько особенностей в разных браузерах*/
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+
+/*обнуляем все заголовки*/
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+
+// Основые цвета
+@color_backgrount: #EAEAEA;
+@color_white: #FFFFFF;
+@color_text_black: #101010;
+@color_grey_dark: #838383;
+@color_grey_light: #AAAAAA;
+@color_shadow: rgba(0, 0, 0, 0.25);
+@color_orange: #FFCE7F;
+@color_orange_dark: #FFA542;
+@color_red: #DF6464;
+@color_green:#4AFD80;
+body{
+    background: @color_backgrount;  
+    display: flex;
+    flex-direction: column;  
+    height: 100%;  
+}
