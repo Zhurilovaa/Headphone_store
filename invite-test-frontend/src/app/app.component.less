@@ -1,0 +1,365 @@
+@import "/src/styles.less";
+
+.content{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tab_content{
+    width: 75%;
+    top:70px;
+    position:absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    padding-bottom: 170px;
+    display: flex;
+    flex-direction: column;
+}
+
+.part{
+    display: flex;
+    flex-direction: column;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-section {
+    margin-left: 5%;
+    margin-top: 2%;
+
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: @color_grey_dark;
+}
+
+.products-list {
+    width:100%;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.product-element{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    width: 360px;
+    margin: 8px;
+    background-color: @color_white;
+    border-radius: 10px;
+    padding: 10px;
+    &:hover{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        transition: all 0.8s;
+    }
+}
+
+.product-element__img {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-product{    
+    height: 240px;
+}
+
+.title-and-price{
+    padding: 10px;
+    width:90%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.title-and-price__title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 21px;
+    color: @color_text_black;
+}
+
+.title-and-price__price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+
+    color: @color_orange_dark;
+}
+
+.rate-and-buy{
+    padding: 10px;
+    width:100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rate-and-buy__rate{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.rate-and-buy__rate-value{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    color: @color_grey_dark;
+    align-self: center;
+    padding:3px;
+}
+
+.buy{
+    width:50%;
+    .button-buy{
+        width:100%;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+
+        color: @color_text_black;
+        background-color: @color_white;
+        border-radius: 10px;
+
+        padding:3px;
+
+        &:hover{
+            color:@color_orange_dark;
+        }
+        &:active{
+            color:@color_green;
+            background-color: @color_backgrount;
+        }
+    }
+}
+
+
+.list-buy{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.product-in-basket{
+    width:100%;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color:  @color_white;
+    margin: 8px;
+    border-radius: 10px;
+    &:hover{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        transition: all 0.8s;
+    }
+    .img-and-price{
+        width:80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .title-and-price{
+            display: flex;
+            flex-direction: column;
+            .title-and-price__price{
+                color: @color_grey_light;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.add-and-price{
+    padding: 10px;
+    width:100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .add-and-price__add{
+        display: flex;
+        flex-direction: row;
+        .add-and-price__minus-plus{
+            width:50%;
+            .button-minus-plus{ 
+                width:27px;               
+                font-family: sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 21px;
+
+                color: @color_white;
+                background-color: @color_orange;
+                border-radius: 50%;
+
+                padding:3px;
+
+                &:hover{
+                    font-weight: 700;
+                    color:@color_white;
+                    background-color: @color_orange_dark;
+                }
+                &:active{
+                    color:@color_green;
+                    background-color: @color_backgrount;
+                }
+            }
+        }
+        .add-and-price__count{
+            margin-left:15px;
+            margin-right:15px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+
+            color: @color_text_black;
+        }        
+    }    
+}
+
+.add-and-price__price{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+
+    color: @color_grey_dark;
+}
+
+.empty{
+    padding:5%;
+    .name-section{
+        font-size: 18px;
+    }
+}
+
+.basket{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .pay{
+
+        align-self: baseline;
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        background-color: @color_white;
+        border-radius: 10px;
+        .name-section{
+            margin:0;
+        }
+        .price-all-product{
+            margin: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            .name-section{
+                color:@color_text_black;
+                font-size: 18px;
+            }
+            .add-and-price__price{ 
+                margin-right: 25px;           
+                color: @color_text_black;
+            }
+        }
+        .pay-all{
+            width: 100%;
+            .button-buy{
+                width: 100%;
+                border-radius: 10px;
+                padding:20px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: -10px;                
+                font-family: sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 21px;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);                
+            }
+        }
+    }
+}
+
+.delete-product{
+    width:100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    .delete-button{
+        margin-right: 10px;
+        background-color: @color_white;
+        img{
+            width: 25px;
+            height: 25px;
+        }
+        &:hover{
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+    }
+}
+
+.not-disabled{
+    background-color: @color_text_black;
+    color: @color_white;
+    &:hover{
+        color: @color_grey_dark;
+        font-weight: 700;
+        background-color: @color_orange;
+        transition: all 0.8s;
+    }
+    &:active{
+        color: @color_green;
+        font-weight: 700;
+        background-color: @color_grey_light;
+        transition: all 0.1s;
+    }
+}
+.disabled{
+    background-color: @color_grey_light;
+    color: @color_backgrount;
+    cursor: not-allowed;
+    &:hover{
+        background-color: @color_backgrount;
+        color: @color_grey_light;
+    }
+}

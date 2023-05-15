@@ -1,0 +1,121 @@
+@import "/src/styles.less";
+
+
+.footer{
+    width: 75%;
+    height: 149px;
+
+    position:fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: @color_white;
+    box-shadow: 0px 0px 20px @color_white;
+    border-radius: 30px 30px 0px 0px;
+}
+
+
+.logo{
+    position: absolute;
+    left: 3%;
+    top: 25%;
+    bottom: 25%;
+}
+
+.name-shop{   
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: @color_text_black;
+    &:hover{
+        color: @color_orange_dark;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+}
+
+.links{
+    width: 40%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:25%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;   
+
+    font-family: sans-serif; 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: @color_text_black;
+    p:hover{
+        color: @color_orange_dark;
+        font-weight: 500;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    .links__part{
+        width: 100%;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        .links__lang-part{
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .links__lang{
+                margin-left: 5px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+
+                color: @color_text_black;
+
+                #rus{
+                    color: @color_orange_dark; 
+                    font-weight: 700;
+                }
+                &:hover{
+                    cursor: pointer;
+                } 
+            }
+        }
+    }     
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    position: absolute;
+    right: 3%;
+    top: 25%;
+    bottom: 25%;
+    .social-media__icon{
+        margin-left: 5px;
+        &:hover{
+            cursor: pointer;
+        } 
+    }
+}
